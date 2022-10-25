@@ -23,11 +23,11 @@ export default function Beranda({navigation}) {
       <Header />
       <Text style={styles.text}>Pemasukan Nilai Pengukuran</Text>
       <View style={styles.wrapper}>
-        <Input label="Tinggi :" height={50} labelOn />
+        <Input label="Tinggi :" height={50} labelOn satuan="Cm" />
         <Gap height={17} />
-        <Input label="Suhu :" height={50} labelOn />
+        <Input label="Suhu :" height={50} labelOn satuan="°C" />
         <Gap height={17} />
-        <Input label="Beda :" height={50} labelOn />
+        <Input label="Beda :" height={50} labelOn satuan="ℓ" />
         <Gap height={17} />
         <Text style={styles.label}>Tangki :</Text>
         <DropDownPicker

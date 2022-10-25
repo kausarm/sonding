@@ -1,9 +1,12 @@
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 
-export default function Button({label, width, onPress}) {
+export default function Button({label, width, onPress, disabled}) {
   return (
-    <TouchableOpacity style={styles.wrapper(width)} onPress={onPress}>
+    <TouchableOpacity
+      style={styles.wrapper(width)}
+      onPress={onPress}
+      disabled={disabled}>
       <Text style={styles.label}>{label}</Text>
     </TouchableOpacity>
   );

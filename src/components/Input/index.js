@@ -1,17 +1,29 @@
 import {StyleSheet, Text, TextInput, View} from 'react-native';
 import React from 'react';
 
-export default function Input({placeholder, password, label, height, labelOn}) {
+export default function Input({
+  placeholder,
+  password,
+  label,
+  height,
+  labelOn,
+  satuan,
+  onChange,
+  val,
+}) {
   return (
     <>
       <Text style={styles.label(labelOn)}>{label}</Text>
       <View style={styles.input(height)}>
         <TextInput
+          onChangeText={onChange}
           style={styles.inputStyle}
           autoCorrect={false}
           secureTextEntry={password}
           placeholder={placeholder}
+          defaultValue={val}
         />
+        <Text style={styles.text}>{satuan}</Text>
       </View>
     </>
   );
@@ -44,4 +56,8 @@ const styles = StyleSheet.create({
     color: 'black',
     fontWeight: 'bold',
   }),
+  text: {
+    color: '#000000',
+    fontWeight: '700',
+  },
 });

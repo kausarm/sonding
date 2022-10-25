@@ -11,7 +11,7 @@ import {useNavigation} from '@react-navigation/native';
 
 const Header = () => {
   const navigation = useNavigation();
-  const [off, setOff] = useState(false);
+  const [off, setOff] = useState(true);
   return (
     <View style={styles.wrapper}>
       <View style={styles.profile}>
